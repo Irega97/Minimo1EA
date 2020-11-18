@@ -18,7 +18,7 @@ export class InstitutionService {
     return this.http.get<Institution>(environment.apiURL + '/institution/' + name);
   }
 
-  updateInstitution(institution: any){
-    return this.http.post(environment.apiURL + '/institution/update/' + institution.name, institution);
+  updateInstitution(institution: any, name: string){
+    return this.http.post(environment.apiURL + '/institution/update/' + name, institution);
   }
 }

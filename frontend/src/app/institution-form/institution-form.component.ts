@@ -51,7 +51,7 @@ export class InstitutionFormComponent implements OnInit {
     const responsable = this.institutionForm.value.responsable;
     const institution = {"name": name, "description": description, "url": url, "responsable": responsable};
     console.log("INS", institution);
-    this.institutionService.updateInstitution(institution).subscribe(()=>{
+    this.institutionService.updateInstitution(institution, this.insName).subscribe(()=>{
       this.router.navigateByUrl('/institution');
     });
   }
